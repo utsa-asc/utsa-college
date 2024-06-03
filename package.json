@@ -16,6 +16,7 @@
     "rollup-test": "rollup -c"
   },
   "dependencies": {
+    "@builder.io/partytown": "^0.10.1",
     "@fortawesome/fontawesome-pro": "^6.5.1",
     "@frctl/fractal": "^1.5.15",
     "@frctl/handlebars": "^1.2.15",
