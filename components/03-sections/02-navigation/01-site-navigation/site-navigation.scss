@@ -172,6 +172,10 @@
 }
 
 @include color-mode(dark) {
+	.campus-wide.alert-danger {
+		color: $white;
+	}
+
 	#header .top-navigation {
 		background-color: $grey-e;
 	}
