@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>UTSA</title>
+   <meta charset="utf-8" />
+   <meta name="keywords" content="UTSA" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="College Design Language System - Academic Strategic Communications - UTSA" />
+   <link rel="preload" href="https://use.typekit.net" as="font" />
+   <link rel="dns-prefetch" href="https://use.typekit.net" as="font">
+   <link rel="stylesheet" href="https://use.typekit.net/fhh1zvd.css" />
+   <link media="all" rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" />
+   <link media="all" rel="stylesheet" href="{{ path '/college-dls/css/site-fractal.css' }}" />
+   <title>{{ _target.label }} Preview</title>
+   <link href="{{ path '/college-dls/favicon.ico' }}" rel="icon" type="image/x-icon" />
+   <!-- Adobe Font -->
+   
+</head>
+
+<body>
+   <!-- Body Wrapper -->
+   {{{ yield }}}
+   <!-- DO NOT EDIT BELOW THIS POINT -->
+   <script src="{{ path '/college-dls/js/bundle/college-dls-umd.js' }}" type="text/javascript"></script>
+   <script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js" type="text/javascript" charset="utf-8"></script>
+   <script type="text/javascript" charset="utf-8">
+      let table = new DataTable('#file-report',{
+         "pageLength": 50,
+         "order": [[ 2, "desc" ]],
+         fixedHeader: true
+      });
+   </script>
+   <!-- DO NOT EDIT -->
+</body>
+
+</html>

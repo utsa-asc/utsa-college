@@ -1,0 +1,60 @@
+<div id="body-wrapper">
+  <div id="skip-content"><a class="Skip-btn" href="#skipToContent">Skip To Main Content</a></div>
+  <!-- Header Section -->
+  <header id="header" class="main-header sticky-header">
+    {{ render '@global-header' }}
+    {{ render '@site-navigation' }}
+  </header>
+  <!-- Header Section End -->
+  <!-- Main Content Body -->
+  <main>
+ <!--Slider -->
+    <section class="slider-wrapper" id="main-slider-wrapper">
+      {{> @banner--slim}}
+      {{> @breadcrumb }}
+    </section>
+    <!-- End Slider -->
+
+    <section class="page-text-wrapper" id="skipToContent">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>{{ banner.text }}</h2>
+            <div class="table-responsive">
+                    <table id="file-report" data-size="${files.size()}" class="table-design-blue">
+                        <thead>
+                            <th scope="col">Name</th>
+                            <th scope="col">Path</th>
+                            <th scope="col">Size (KB)</th>
+                            <th scope="col">Size (MB)</th>
+                        </thead>
+                        <tbody>
+                          {{#each items.text}}
+                            <tr>
+                                <td>filename-{{this}}.jpg</td>
+                                <td><a href="#" target="_parent">college-dls/filename-{{this}}.jpg</a></td>
+                                <td>{{this}}</td>
+                                <td>{{this}}</td>
+                            </tr>
+                          {{/each}}
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row">Total</th>
+                                <td></td>
+                                <td>1830KB</td>
+                                <td>1830MB</td>
+                            </tr>                            
+                        </tfoot>
+                    </table>                
+                </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  {{ render '@back-to-top' }} 
+  <!-- End Main Content Body -->
+  {{ render '@global-footer' }}
+</div>
